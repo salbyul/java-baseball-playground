@@ -4,7 +4,7 @@ import java.util.Stack;
 
 public class Calculator {
 
-    Stack<Integer> stack = new Stack<>();
+    private final Stack<Integer> stack = new Stack<>();
 
     public int calculate(String string) {
         stack.push(Character.getNumericValue(string.charAt(0)));
