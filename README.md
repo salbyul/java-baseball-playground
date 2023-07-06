@@ -1,3 +1,13 @@
+## 기능 구현 목록
+랜덤한 숫자 3개를 선택한다.\
+유저의 입력을 받는다.\
+유저가 입력한 숫자와 선택된 숫자를 비교한 후 결과를 출력한다.\
+게임이 종료된다.\
+새로 시작과 종료의 선택지를 출력한다.\
+유저의 입력을 받는다.
+
+
+---
 ## [NEXTSTEP 플레이그라운드의 미션 진행 과정](https://github.com/next-step/nextstep-docs/blob/master/playground/README.md)
 
 ---
