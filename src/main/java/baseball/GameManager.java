@@ -11,10 +11,15 @@ public class GameManager {
         correctAnswer = new CorrectAnswer();
     }
 
-    private Integer inputNumber() {
+    private UserAnswer inputNumber() {
         System.out.print("숫자를 입력해 주세요 : ");
         int input = scanner.nextInt();
+
+        int firstInput = input / 100;
+        int secondInput = input % 100 / 10;
+        int thirdInput = input % 10;
+
         System.out.println();
-        return input;
+        return new UserAnswer(firstInput, secondInput, thirdInput);
     }
 }
