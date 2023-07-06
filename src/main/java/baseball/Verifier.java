@@ -10,14 +10,14 @@ public class Verifier {
         result = new RoundResult();
     }
 
-    public RoundResult verify(CorrectAnswer correctAnswer, UserAnswer userAnswer) {
+    public boolean verify(CorrectAnswer correctAnswer, UserAnswer userAnswer) {
         init(correctAnswer, userAnswer);
 
         for (int i = 0; i < correctValues.length; i++) {
             verifyUserValues(i);
         }
 
-        return result;
+        return result.getStrike() == 3;
     }
 
     private void verifyUserValues(int i) {
@@ -46,5 +46,9 @@ public class Verifier {
             correctValues[i] = correctAnswer.getValue()[i];
             userValues[i] = userAnswer.getValue()[i];
         }
+    }
+
+    public RoundResult getResult() {
+        return result;
     }
 }

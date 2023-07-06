@@ -13,7 +13,8 @@ public class VerifierTest {
         MockCorrectAnswer mockCorrectAnswer = new MockCorrectAnswer(6, 2, 1);
         UserAnswer userAnswer = new UserAnswer(1, 2, 3);
         Verifier verifier = new Verifier();
-        RoundResult result = verifier.verify(mockCorrectAnswer, userAnswer);
+        verifier.verify(mockCorrectAnswer, userAnswer);
+        RoundResult result = verifier.getResult();
 
         assertThat(result.getStrike()).isEqualTo(1);
         assertThat(result.getBall()).isEqualTo(1);
