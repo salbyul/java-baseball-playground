@@ -2,32 +2,22 @@ package baseball;
 
 public class CorrectAnswer {
 
-    private final Integer firstNumber;
-    private final Integer secondNumber;
-    private final Integer thirdNumber;
+    private final int[] value = new int[3];
 
     public CorrectAnswer() {
         int randomNumber = (int) (Math.random() * 10);
-        firstNumber = randomNumber;
-        while (randomNumber == firstNumber) {
+        value[0] = randomNumber;
+        while (randomNumber == value[0]) {
             randomNumber = (int) (Math.random() * 10);
         }
-        secondNumber = randomNumber;
-        while (randomNumber == firstNumber || randomNumber == secondNumber) {
+        value[1] = randomNumber;
+        while (randomNumber == value[0] || randomNumber == value[1]) {
             randomNumber = (int) (Math.random() * 10);
         }
-        thirdNumber = randomNumber;
+        value[2] = randomNumber;
     }
 
-    public Integer getFirstNumber() {
-        return firstNumber;
-    }
-
-    public Integer getSecondNumber() {
-        return secondNumber;
-    }
-
-    public Integer getThirdNumber() {
-        return thirdNumber;
+    public int[] getValue() {
+        return value;
     }
 }

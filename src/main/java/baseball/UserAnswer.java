@@ -2,25 +2,15 @@ package baseball;
 
 public class UserAnswer {
 
-    private final Integer firstNumber;
-    private final Integer secondNumber;
-    private final Integer thirdNumber;
+    private final int[] value = new int[3];
 
     public UserAnswer(Integer firstNumber, Integer secondNumber, Integer thirdNumber) {
-        this.firstNumber = firstNumber;
-        this.secondNumber = secondNumber;
-        this.thirdNumber = thirdNumber;
+        value[0] = firstNumber;
+        value[1] = secondNumber;
+        value[2] = thirdNumber;
     }
 
-    public Integer getFirstNumber() {
-        return firstNumber;
-    }
-
-    public Integer getSecondNumber() {
-        return secondNumber;
-    }
-
-    public Integer getThirdNumber() {
-        return thirdNumber;
+    public int[] getValue() {
+        return value;
     }
 }
