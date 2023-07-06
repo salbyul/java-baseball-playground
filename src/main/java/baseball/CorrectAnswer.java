@@ -18,4 +18,16 @@ public class CorrectAnswer {
         }
         thirdNumber = randomNumber;
     }
+
+    public Integer getFirstNumber() {
+        return firstNumber;
+    }
+
+    public Integer getSecondNumber() {
+        return secondNumber;
+    }
+
+    public Integer getThirdNumber() {
+        return thirdNumber;
+    }
 }
