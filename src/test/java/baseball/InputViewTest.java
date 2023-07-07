@@ -1,12 +1,14 @@
 package baseball;
 
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
+import java.util.Scanner;
+
+import static org.assertj.core.api.Assertions.*;
 
 public class InputViewTest {
 
@@ -21,8 +23,8 @@ public class InputViewTest {
     @Test
     @DisplayName("'숫자를 입력해주세요: ' 출력")
     void printInputNumber() {
-        InputView inputView = new InputView();
+        InputView inputView = new InputView(new Scanner(System.in));
         inputView.printInputNumber();
-        Assertions.assertThat("숫자를 입력해주세요: ").isEqualTo(outputStream.toString());
+        assertThat("숫자를 입력해주세요: ").isEqualTo(outputStream.toString());
     }
 }
