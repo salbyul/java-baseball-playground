@@ -19,7 +19,7 @@ public class InputViewTest {
     }
 
     @Test
-    @DisplayName("숫자 입력 출력")
+    @DisplayName("'숫자를 입력해주세요: ' 출력")
     void printInputNumber() {
         InputView inputView = new InputView();
         inputView.printInputNumber();
