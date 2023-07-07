@@ -2,7 +2,7 @@ package baseball;
 
 public class Validator {
 
-    public int validate(String input) {
+    public int validateForInputView(String input) {
         int number = validateNumber(input);
         validateThreeNumber(number);
         validateContainZero(number);
@@ -49,5 +49,17 @@ public class Validator {
         if (preLetter == currentLetter) {
             throw new IllegalArgumentException("같은 숫자가 포함될 수 없습니다.");
         }
+    }
+
+    public void validateOneOrTwo(int input) {
+        if (input != 1 && input != 2) {
+            throw new IllegalArgumentException("1과 2만 입력할 수 있습니다.");
+        }
+    }
+
+    public int validateForResultView(String input) {
+        int number = validateNumber(input);
+        validateOneOrTwo(number);
+        return number;
     }
 }
